@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="jqvalidation.js"></script>
+</head>
+
+<form action="/action_page.php" class="validateform" novalidate>
+    First Name:<input type="text" class="testing" name="firstname" value="" required maxlength="100" pattern='^\d*[0-9](|.\d*[0-9]|,\d*[0-9])?$' minlength="5" fieldname="First Name"><br>
+    Last Name: <input type="text" name="lastname" value=""><br>
+    Url: <input type="url" name="lastname" value="" required><br>
+    Number: <input type="number" min="2" max="10" required> <br>
+    Text Area: <textarea required name="textarea" minlength="10" maxlength="100"></textarea> <br>
+    FILE MULTIPLE : <input type="file" required multiple allowtypes="png,jpg,jpeg"> <br>
+    FILE : <input type="file"><br>
+    EMAIL : <input type="email" required>
+
+    <br><input type="submit" value="Submit">
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        errMsgPlace = 'after';
+        $(document).on('submit', '.validateform', function (e) {
+            formValidation('.validateform', e);
+        });
+
+    });
+</script>
+</html>
