@@ -1,4 +1,4 @@
-# jQuery Validation 
+# jQuery FORM Validation 
 
 Simple validation library for form validation
 
